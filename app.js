@@ -477,6 +477,10 @@
     el.scrollWrap.classList.remove("show");
     el.chestBtn.disabled = false;
     el.chestBtn.setAttribute("aria-expanded", "false");
+     setTimeout(() => {
+    chestBtn.style.display = "none";   // صندوقچه مخفی شود
+    scrollWrap.classList.add("show");  // فقط تومار نمایش داده شود
+}, 500);
   }
 
   el.chestBtn.addEventListener("click", () => {
